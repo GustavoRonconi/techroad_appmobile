@@ -374,6 +374,62 @@ Builder.load_string("""
         on_press: root.on_press_sair();
         font_name: "consola"
         font_size: "35sp"
+        
+#TELA QUANTIDADE TRANSPORTADA      
+<TelaQuantidade2@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]@TechRoad[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .89}
+        font_size: "60sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD]Quantidade Transportada:[/color]"
+        pos_hint: {'center_x': .5, 'center_y': .75}
+        font_size: "50sp"
+    
+    InputTechRoad:
+        id: qtd_transportada #coleta o local origem digitado
+        hint_text: "Quantidade(m³)"
+        hint_text_color: C("#87CEEB")
+        pos_hint: {"center_x":.5, "y":.50}
+        size_hint: (.8, .18)
+        font_size: "80sp"
+        multiline: False
+        input_type: "number"        
+       
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.21}
+        size_hint: (.39, .18)
+        text: "Avançar"
+        on_press: root.on_press_avancar()
+        font_name: "consola"
+        font_size: "35sp" 
+             
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.21}
+        size_hint: (.39, .18)
+        text: "Voltar"
+        on_press: root.on_press_voltar();qtd_transportada.text = ""
+        font_name: "consola"
+        font_size: "35sp"   
+        
+    ButtonTechRoad:
+        pos_hint: {"center_x":.5, "y":.039}
+        size_hint: (.18, .1)
+        text: "Sair"
+        on_press: root.on_press_sair();
+        font_name: "consola"
+        font_size: "35sp"        
 """)
 
 
@@ -401,7 +457,7 @@ class TelaLocalOrigem2(Screen):
 
 class TelaMaterial2(Screen):
     def on_press_avancar(self):
-        print(self.ids.cod_material.text)
+        App.get_running_app().root.current = 'telaquantidade2'
 
     def on_press_voltar(self):
         App.get_running_app().root.current = 'telalocalorigem2'
@@ -409,6 +465,19 @@ class TelaMaterial2(Screen):
     def on_press_sair(self):
         global ultimatela
         ultimatela = 'telamaterial2'
+        App.get_running_app().root.current = 'telasair'
+
+
+class TelaQuantidade2(Screen):
+    def on_press_avancar(self):
+        print(self.ids.qtd_material.text)
+
+    def on_press_voltar(self):
+        App.get_running_app().root.current = 'telamaterial2'
+
+    def on_press_sair(self):
+        global ultimatela
+        ultimatela = 'telaquantidade2'
         App.get_running_app().root.current = 'telasair'
 
 
@@ -453,6 +522,7 @@ class TelaSair(Screen):
         self.manager.get_screen('telalocalorigem2').ids.local_origem.text = ""
         self.manager.get_screen('telalocaldestino1').ids.local_destino.text = ""
         self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
+        self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = ""
 
     def on_press_nao(self):
         App.get_running_app().root.current = ultimatela
@@ -488,6 +558,7 @@ gt.add_widget(TelaSair(name='telasair'))
 gt.add_widget(TelaLocalOrigem2(name='telalocalorigem2'))
 gt.add_widget(TelaLocalDestino1(name='telalocaldestino1'))
 gt.add_widget(TelaMaterial2(name='telamaterial2'))
+gt.add_widget(TelaQuantidade2(name='telaquantidade2'))
 
 
 class TechRoadApp(App):
