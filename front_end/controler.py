@@ -645,5 +645,5 @@ class TechRoadApp(App):
         return gt
 
 
-if __name__ == '__main__':  # RODA A APLICAÇÃO PRINCIPAL
+if __name__ == '__main__':  # RODA A APLICAÇÃO PRINCIPALl
     TechRoadApp().run()

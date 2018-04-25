@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="">
+    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/front_end/controler.py" afterPath="$PROJECT_DIR$/front_end/controler.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="controler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front_end/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="216">
+              <caret line="647" column="57" lean-forward="false" selection-start-line="647" selection-start-column="57" selection-end-line="647" selection-end-column="57" />
               <folding>
                 <element signature="e#171#195#0" expanded="true" />
               </folding>
@@ -92,6 +93,7 @@
         <option value="$PROJECT_DIR$/front/visualclass.kv" />
         <option value="$PROJECT_DIR$/front/controler.py" />
         <option value="$PROJECT_DIR$/front/controler.py" />
+        <option value="$PROJECT_DIR$/front_end/controler.py" />
       </list>
     </option>
   </component>
@@ -566,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524682340792</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
+      <created>1524682347789</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1524682347789</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -587,7 +596,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15729484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -799,8 +808,8 @@
     <entry file="file://$PROJECT_DIR$/mobile/front_end/controler.py" />
     <entry file="file://$PROJECT_DIR$/front_end/controler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="216">
+          <caret line="647" column="57" lean-forward="false" selection-start-line="647" selection-start-column="57" selection-end-line="647" selection-end-column="57" />
           <folding>
             <element signature="e#171#195#0" expanded="true" />
           </folding>
