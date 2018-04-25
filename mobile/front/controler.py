@@ -251,7 +251,7 @@ Builder.load_string("""
         font_name: "consola"
         font_size: "35sp"
         
-#TELA LOCAL DESTINO       
+#TELA LOCAL DESTINO1       
 <TelaLocalDestino1@FloatLayout>:
     orientation: "horizontal"
     canvas.before:
@@ -265,16 +265,17 @@ Builder.load_string("""
         markup: True
         text: "[color=1874CD][b]@TechRoad[/b][/color]"
         pos_hint: {'center_x': .5, 'center_y': .89}
-        font_size: "60sp"
+        font_size: "60sp"        
+        markup: True
         
     TextTechRoad:
-        markup: True
         text: "[color=1874CD]Local Destino:[/color]"
         pos_hint: {'center_x': .5, 'center_y': .75}
         font_size: "50sp"
+        markup: True
     
     InputTechRoad:
-        id: local_destino #coleta o local origem digitado
+        id: local_destino1 #coleta o local origem digitado
         hint_text: "Cód. Local"
         hint_text_color: C("#87CEEB")
         pos_hint: {"center_x":.5, "y":.50}
@@ -301,7 +302,70 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();local_destino.text = ""
+        on_press: root.on_press_voltar();local_destino1.text = ""
+        font_name: "consola"
+        font_size: "35sp"   
+        
+    ButtonTechRoad:
+        pos_hint: {"center_x":.5, "y":.039}
+        size_hint: (.18, .1)
+        text: "Sair"
+        on_press: root.on_press_sair();
+        font_name: "consola"
+        font_size: "35sp"
+        
+#TELA LOCAL DESTINO2       
+<TelaLocalDestino2@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]@TechRoad[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .89}
+        font_size: "60sp"        
+        markup: True
+        
+    TextTechRoad:
+        text: "[color=1874CD]Local Destino:[/color]"
+        pos_hint: {'center_x': .5, 'center_y': .75}
+        font_size: "50sp"
+        markup: True
+    
+    InputTechRoad:
+        id: local_destino2 #coleta o local origem digitado
+        hint_text: "Cód. Local"
+        hint_text_color: C("#87CEEB")
+        pos_hint: {"center_x":.5, "y":.50}
+        size_hint: (.8, .18)
+        font_size: "80sp"
+        multiline: False
+        input_type: "number"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=FF0000]Desc. Obra...[/color]"
+        pos_hint: {'center_x': .5, 'center_y': .445}
+        font_size: "50sp"
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.21}
+        size_hint: (.39, .18)
+        text: "Avançar"
+        on_press: root.on_press_avancar()
+        font_name: "consola"
+        font_size: "35sp" 
+             
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.21}
+        size_hint: (.39, .18)
+        text: "Voltar"
+        on_press: root.on_press_voltar();local_destino2.text = ""
         font_name: "consola"
         font_size: "35sp"   
         
@@ -470,7 +534,7 @@ class TelaMaterial2(Screen):
 
 class TelaQuantidade2(Screen):
     def on_press_avancar(self):
-        print(self.ids.qtd_material.text)
+        App.get_running_app().root.current = 'telalocaldestino2'
 
     def on_press_voltar(self):
         App.get_running_app().root.current = 'telamaterial2'
@@ -478,6 +542,18 @@ class TelaQuantidade2(Screen):
     def on_press_sair(self):
         global ultimatela
         ultimatela = 'telaquantidade2'
+        App.get_running_app().root.current = 'telasair'
+
+class TelaLocalDestino2(Screen):
+    def on_press_avancar(self):
+        pass
+
+    def on_press_voltar(self):
+        App.get_running_app().root.current = 'telaquantidade2'
+
+    def on_press_sair(self):
+        global ultimatela
+        ultimatela = 'telalocaldestino2'
         App.get_running_app().root.current = 'telasair'
 
 
@@ -505,7 +581,7 @@ class DataAtual(Label):
 
 class RelogioDigital(Label):
     def update(self, *args):
-        self.markup =  True
+        self.markup = True
         self.text = "[b][color=1874CD]" + time.strftime('%H:%M:%S') + "[/color][/b]"
         self.pos_hint = {"center_x": .58, "center_y": .45}
         self.font_name = "consola"
@@ -520,9 +596,10 @@ class TelaSair(Screen):
         self.manager.get_screen('telalogin').ids.usuario.text = ""
         self.manager.get_screen('telalogin').ids.senha.text = ""
         self.manager.get_screen('telalocalorigem2').ids.local_origem.text = ""
-        self.manager.get_screen('telalocaldestino1').ids.local_destino.text = ""
+        self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = ""
         self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
         self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = ""
+        self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
 
     def on_press_nao(self):
         App.get_running_app().root.current = ultimatela
@@ -559,6 +636,8 @@ gt.add_widget(TelaLocalOrigem2(name='telalocalorigem2'))
 gt.add_widget(TelaLocalDestino1(name='telalocaldestino1'))
 gt.add_widget(TelaMaterial2(name='telamaterial2'))
 gt.add_widget(TelaQuantidade2(name='telaquantidade2'))
+gt.add_widget(TelaLocalDestino2(name='telalocaldestino2'))
+
 
 
 class TechRoadApp(App):
