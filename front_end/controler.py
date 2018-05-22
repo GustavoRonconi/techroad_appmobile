@@ -57,7 +57,7 @@ Builder.load_string("""
         id: usuario #coleta o valor de usuario
         hint_text: "Usuário"
         hint_text_color: C("#87CEEB")
-        pos_hint: {"x":.1, "y":.5}
+        pos_hint: {"x":.1, "y":.55}
         size_hint: (.8, .15)
         font_size: "60sp"
         multiline: False
@@ -66,7 +66,7 @@ Builder.load_string("""
         id: senha #coleta o valor de senha
         hint_text: "Senha"
         hint_text_color: C("#87CEEB")
-        pos_hint: {"x":.1, "y":.3}
+        pos_hint: {"x":.1, "y":.38}
         size_hint: (.8, .15)
         font_size: "50sp"
         password: True
@@ -74,12 +74,18 @@ Builder.load_string("""
 
 
     ButtonTechRoad:
-        pos_hint: {"x":.1, "y":.10}
+        pos_hint: {"x":.1, "y":.21}
         size_hint: (.8, .15)
         text: "Login"
         on_press: root.on_press_login()
         font_name: "consola"
         font_size: "30sp"
+        
+    TextTechRoad:
+        markup: True
+        id: validador_login
+        pos_hint: {'center_x': .5, 'center_y': .15}
+        font_size: "40sp"
 
     TextTechRoad:
         markup: True
@@ -145,6 +151,9 @@ Builder.load_string("""
         font_size: "35sp"
         
     ButtonTechRoad:
+        id: botao_equipamento
+        disabled: True
+        opacity: 0
         pos_hint: {"center_x":.765, "y":.05}
         size_hint: (.3, .1)
         text: "Equipamento"
@@ -678,7 +687,7 @@ Builder.load_string("""
         font_size: "35sp"             
              
         
-#TELA SELECIONAR VEICULO - APENAS ADMINISTRADORES      
+#TELA SELECIONAR EQUIPAMENTO - APENAS ADMINISTRADORES      
 <TelaSelecionarEquipamento@FloatLayout>:
     orientation: "horizontal"
     canvas.before:
@@ -716,7 +725,7 @@ Builder.load_string("""
         id: novo_equipamento #coleta o novo veiculo do sistema
         hint_text: "Cod. Equip."
         hint_text_color: C("#87CEEB")
-        pos_hint: {"center_x":.5, "y":.35}
+        pos_hint: {"center_x":.5, "y":.34}
         size_hint: (.8, .18)
         font_size: "80sp"
         multiline: False
@@ -750,9 +759,35 @@ Builder.load_string("""
 
 class TechRoadLogin(Screen):
     def on_press_login(self):
-        print(self.ids.usuario.text)
-        print(self.ids.senha.text)
-        App.get_running_app().root.current = 'telainicial'
+        login_user = ''
+        #VERIFICA SE O USUARIO EXISTE NO SISTEMA
+        u = conn.cursor()
+        for row in u.execute("SELECT EMAIL FROM auth_user WHERE USER_ID > 0"):
+            for usuario in row:
+                if usuario[:usuario.find('@')] == self.ids.usuario.text:
+                    login_user = usuario
+        s = conn.cursor()
+        s.execute("SELECT PASSWORD FROM auth_user WHERE EMAIL = '%s'" % login_user)
+        senha = s.fetchone()
+
+        if login_user == '':
+            self.manager.get_screen('telalogin').ids.validador_login.text = "[color=FF0000]Usuário Inexistente[/color]"
+
+        elif senha[0] != self.ids.senha.text:
+            self.manager.get_screen('telalogin').ids.validador_login.text = "[color=FF0000]Senha Incorreta[/color]"
+
+        else:
+            # VERIFICA SE O USUARIO E ADMINISTRADOR
+            a = conn.cursor()
+            a.execute("SELECT GROUP_ID FROM auth_user WHERE EMAIL = '%s'" % login_user)
+            grupo = a.fetchone()
+            if grupo[0] == 1:
+                self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = False
+                self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 1
+            App.get_running_app().root.current = 'telainicial'
+
+
+
 
 
 class TelaLocalOrigem2(Screen):
@@ -1123,6 +1158,8 @@ class TelaSair(Screen):
         self.manager.get_screen('telaquantidade2').ids.ton.state = "normal"
         self.manager.get_screen('telaquantidade2').ids.un.state = "normal"
         self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
+        self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = True
+        self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 0
 
     def on_press_nao(self):
         App.get_running_app().root.current = ultimatela
@@ -1140,6 +1177,10 @@ class TechRoadMain(Screen):
 
     def on_press_logoff(self):
         App.get_running_app().root.current = 'telalogin'
+        self.manager.get_screen('telalogin').ids.usuario.text = ""
+        self.manager.get_screen('telalogin').ids.senha.text = ""
+        self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = True
+        self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 0
 
     def on_press_op1(self):
         App.get_running_app().root.current = 'teladeslocamento1'
