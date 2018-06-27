@@ -3,6 +3,7 @@
 # CIVILTEC TECNOLOGIA EM CONSTRUÇÃO#####
 #########################################
 # coding: utf-8
+# update: 27-06-2018 0741
 
 from kivy.app import App
 # from kivy.uix.floatlayout import FloatLayout
@@ -11,18 +12,16 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.clock import Clock
-from kivy.properties import StringProperty
 import time
 import sqlite3
 import kivy
-kivy.require('1.9.1')
 
+kivy.require('1.9.1')
 Window.clearcolor = (1, 1, 1, 1)  # FUNDO BRANCO
 
 
 # CONECTA COM O BANCO DE DADOS
 conn = sqlite3.connect('C:\\DEV\\techroad_appmobile\database\\techroadlocal.db', isolation_level=None)
-
 
 
 Builder.load_string("""
@@ -168,6 +167,52 @@ Builder.load_string("""
         font_size: "24sp"
         multiline: True  
         readonly: True
+        
+#TELA CANCELAR        
+<TelaCancelar@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]@TechRoad[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .78}
+        font_size: "60sp"
+    
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Deseja realmente cancelar?[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .6}
+        font_size: "50sp"
+    
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Se você cancelar todos os campos preenchidos serão excluídos![/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .53}
+        font_size: "18sp" 
+         
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.08, "y":.25}
+        size_hint: (.4, .2)
+        text: "Sim"
+        on_press: root.on_press_sim()
+        font_name: "consola"
+        font_size: "35sp"
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.52, "y":.25}
+        size_hint: (.4, .2)
+        text: "Não"
+        on_press: root.on_press_nao()
+        font_name: "consola"
+        font_size: "35sp"
+                
 #TELA SAIR        
 <TelaSair@FloatLayout>:
     orientation: "horizontal"
@@ -253,6 +298,7 @@ Builder.load_string("""
         font_size: "30sp"
         
     ButtonTechRoad:
+        id: botao_origem1
         pos_hint: {"x":.51, "y":.21}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -264,11 +310,12 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();local_origem1.text = ""
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_origem1
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
@@ -317,6 +364,7 @@ Builder.load_string("""
         font_size: "30sp"
         
     ButtonTechRoad:
+        id: botao_origem2
         pos_hint: {"x":.51, "y":.21}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -328,11 +376,12 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();local_origem2.text = ""
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_origem2
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
@@ -381,6 +430,7 @@ Builder.load_string("""
         font_size: "30sp"
         
     ButtonTechRoad:
+        id: botao_destino1
         pos_hint: {"x":.51, "y":.21}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -392,11 +442,12 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();local_destino1.text = ""
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_destino1
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
@@ -428,7 +479,7 @@ Builder.load_string("""
         markup: True
     
     InputTechRoad:
-        id: local_destino2 #coleta o local origem digitado
+        id: local_destino2 #coleta o local destino digitado
         hint_text: "Cód. Local"
         hint_text_color: C("#87CEEB")
         pos_hint: {"center_x":.5, "y":.50}
@@ -445,6 +496,7 @@ Builder.load_string("""
         font_size: "30sp"
         
     ButtonTechRoad:
+        id: botao_destino2
         pos_hint: {"x":.51, "y":.21}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -456,11 +508,12 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();local_destino2.text = ""
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_destino2
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
@@ -508,6 +561,7 @@ Builder.load_string("""
         font_size: "30sp"
         
     ButtonTechRoad:
+        id: botao_material2
         pos_hint: {"x":.51, "y":.21}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -519,17 +573,19 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.21}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();cod_material.text = ""
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_material2
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
         on_press: root.on_press_sair();
         font_name: "consola"
         font_size: "35sp"
+        
         
 #TELA QUANTIDADE TRANSPORTADA      
 <TelaQuantidade2@FloatLayout>:
@@ -576,14 +632,14 @@ Builder.load_string("""
         
     
     ToggleButtonTechRoad:
-        id: ton
+        id: kg
         pos_hint: {"x":.3749, "y":.635}
         size_hint: (.255, .13)
-        text: "TON."
+        text: "KG."
         group: "unidades"
         font_name: "consola"
         font_size: "35sp"
-        on_state: root.select_unidade('TON.', self.state)
+        on_state: root.select_unidade('KG.', self.state)
         
     ToggleButtonTechRoad:
         id: un
@@ -602,6 +658,7 @@ Builder.load_string("""
         font_size: "50sp"
         
     ButtonTechRoad:
+        id: botao_quantidade2
         pos_hint: {"x":.51, "y":.15}
         size_hint: (.39, .18)
         text: "Avançar"
@@ -613,11 +670,12 @@ Builder.load_string("""
         pos_hint: {"x":.1, "y":.15}
         size_hint: (.39, .18)
         text: "Voltar"
-        on_press: root.on_press_voltar();qtd_transportada.text = ""; m3.state = 'normal'; ton.state = 'normal'; un.state = 'normal'
+        on_press: root.on_press_voltar();
         font_name: "consola"
         font_size: "35sp"   
         
     ButtonTechRoad:
+        id: sair_quantidade2
         pos_hint: {"center_x":.5, "y":.039}
         size_hint: (.18, .1)
         text: "Sair"
@@ -752,8 +810,300 @@ Builder.load_string("""
         text: "Voltar"
         on_press: root.on_press_voltar();novo_equipamento.text = ""
         font_name: "consola"
-        font_size: "35sp"        
+        font_size: "35sp"
 
+#RESUMO DE INFORMAÇÕES PRE-ROTA 1(TERRAPLENAGEM BOTA FORA)      
+<ResumoInfo1@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Resumo pré-rota[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .90}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Conferir e corrigir, se necessário![/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .83}
+        font_size: "18sp" 
+        
+    TextTechRoad:
+        id: local_origem1_text
+        markup: True
+        text: "[color=1874CD]-Local Origem:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .70}
+        font_size: "40sp"
+        
+    InputTechRoad:
+        markup: True
+        id: local_origem_op1
+        pos_hint: {"x": .48, "y": .695}
+        size_hint: (.45, .09)
+        font_size: "40sp"
+        readonly: True
+        on_focus: root.ao_focar1();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        
+        
+    TextTechRoad:
+        id: local_destino1_text
+        markup: True
+        text: "[color=1874CD]-Local Destino:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .60}
+        font_size: "40sp"
+     
+    InputTechRoad:
+        markup: True
+        id: local_destino_op1
+        pos_hint: {"x": .48, "y": .595}
+        size_hint: (.45, .09)
+        font_size: "40sp"
+        readonly: True
+        on_focus: root.ao_focar2();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+    
+    TextTechRoad:
+        id: hora1_text
+        markup: True
+        text: "[color=1874CD]-Início(h:min):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .50}
+        font_size: "40sp" 
+        
+    InputTechRoad:
+        markup: True
+        id: hora_op1        
+        pos_hint: {"x": .48, "y": .495}
+        size_hint: (.45, .09)
+        font_size: "40sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True
+        
+    TextTechRoad:
+        id: km1_text
+        markup: True
+        text: "[color=1874CD]-Início(km):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .40}
+        font_size: "40sp"
+    
+    InputTechRoad:
+        markup: True
+        id: km_op1        
+        pos_hint: {"x": .48, "y": .395}
+        size_hint: (.45, .09)
+        font_size: "40sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True  
+        
+       
+    TextTechRoad:
+        id: nivel1_text
+        markup: True
+        text: "[color=1874CD]-Início(l):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .30}
+        font_size: "40sp"
+    
+    InputTechRoad:
+        markup: True
+        id: nivel_op1        
+        pos_hint: {"x": .48, "y": .295}
+        size_hint: (.45, .09)
+        font_size: "40sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True 
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.055}
+        size_hint: (.39, .18)
+        text: "Iniciar"
+        on_press: root.on_press_avancar()
+        font_name: "consola"
+        font_size: "35sp"
+    
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.055}
+        size_hint: (.39, .18)
+        text: "Cancelar"
+        on_press: root.on_press_cancelar()
+        font_name: "consola"
+        font_size: "35sp"
+        
+#RESUMO DE INFORMAÇÕES PRE-ROTA 2(TRANSPORTE)      
+<ResumoInfo2@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Resumo pré-rota[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .925}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Conferir e corrigir, se necessário![/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .865}
+        font_size: "18sp" 
+        
+    TextTechRoad:
+        id: local_origem2_text
+        markup: True
+        text: "[color=1874CD]-Local Origem:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .76}
+        font_size: "35sp"
+        
+    InputTechRoad:
+        markup: True
+        id: local_origem_op2
+        pos_hint: {"x": .48, "y": .755}
+        size_hint: (.45, .08)
+        font_size: "35sp"
+        readonly: True
+        on_focus: root.ao_focar1();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        
+        
+    TextTechRoad:
+        id: local_destino2_text
+        markup: True
+        text: "[color=1874CD]-Local Destino:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .67}
+        font_size: "35sp"
+     
+    InputTechRoad:
+        markup: True
+        id: local_destino_op2
+        pos_hint: {"x": .48, "y": .665}
+        size_hint: (.45, .08)
+        font_size: "35sp"
+        readonly: True
+        on_focus: root.ao_focar2();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+
+    TextTechRoad:
+        id: material2_text
+        markup: True
+        text: "[color=1874CD]-Cód. Material:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .58}
+        font_size: "35sp"   
+
+    InputTechRoad:
+        markup: True
+        id: material_op2
+        pos_hint: {"x": .48, "y": .575}
+        size_hint: (.45, .08)
+        font_size: "35sp"
+        readonly: True
+        on_focus: root.ao_focar3();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+    
+        
+    TextTechRoad:
+        id: quantidade2_text
+        markup: True
+        text: "[color=1874CD]-Quantidade:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .49}
+        font_size: "35sp"   
+
+    InputTechRoad:
+        markup: True
+        id: quantidade_op2
+        pos_hint: {"x": .48, "y": .485}
+        size_hint: (.45, .08)
+        font_size: "35sp"
+        readonly: True
+        on_focus: root.ao_focar4();
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2    
+    
+    
+    TextTechRoad:
+        id: hora1_text
+        markup: True
+        text: "[color=1874CD]-Início(h:min):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .40}
+        font_size: "35sp" 
+        
+    InputTechRoad:
+        markup: True
+        id: hora_op2        
+        pos_hint: {"x": .48, "y": .395}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True
+        
+    TextTechRoad:
+        id: km2_text
+        markup: True
+        text: "[color=1874CD]-Início(km):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .31}
+        font_size: "35sp"
+    
+    InputTechRoad:
+        markup: True
+        id: km_op2        
+        pos_hint: {"x": .48, "y": .305}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True  
+        
+       
+    TextTechRoad:
+        id: nivel2_text
+        markup: True
+        text: "[color=1874CD]-Início(l):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .22}
+        font_size: "35sp"
+    
+    InputTechRoad:
+        markup: True
+        id: nivel_op2        
+        pos_hint: {"x": .48, "y": .215}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True 
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.045}
+        size_hint: (.39, .15)
+        text: "Iniciar"
+        on_press: root.on_press_avancar()
+        font_name: "consola"
+        font_size: "35sp"
+    
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.045}
+        size_hint: (.39, .15)
+        text: "Cancelar"
+        on_press: root.on_press_cancelar()
+        font_name: "consola"
+        font_size: "35sp"  
+    
 """)
 
 
@@ -785,6 +1135,7 @@ class TechRoadLogin(Screen):
                 self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = False
                 self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 1
             App.get_running_app().root.current = 'telainicial'
+            self.manager.get_screen('telalogin').ids.validador_login.text = ""
 
 
 
@@ -792,11 +1143,24 @@ class TechRoadLogin(Screen):
 
 class TelaLocalOrigem2(Screen):
     def on_press_avancar(self):
-        if self.manager.get_screen('telalocalorigem2').ids.desc_origem2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
-            App.get_running_app().root.current = 'telamaterial2'
+        if self.manager.get_screen('telalocalorigem2').ids.botao_origem2.text == "Avançar":
+            if self.manager.get_screen('telalocalorigem2').ids.desc_origem2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                App.get_running_app().root.current = 'telamaterial2'
+        else:
+            if self.manager.get_screen('telalocalorigem2').ids.desc_origem2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                self.manager.get_screen('telaprerota2').ids.local_origem_op2.text = self.manager.get_screen('telalocalorigem2').ids.local_origem2.text
+                self.manager.get_screen('telaprerota2').ids.local_origem_op2.focus = False
+                App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'telainicial'
+        if self.manager.get_screen('telalocalorigem2').ids.botao_origem2.text == "Avançar":
+            self.manager.get_screen('telalocalorigem2').ids.local_origem2.text = ""
+            App.get_running_app().root.current = 'telainicial'
+
+        else:
+            self.manager.get_screen('telaprerota2').ids.local_origem_op2.focus = False
+            self.manager.get_screen('telalocalorigem2').ids.local_origem2.text = self.manager.get_screen('telaprerota2').ids.local_origem_op2.text
+            App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_sair(self):
         global ultimatela
@@ -824,11 +1188,26 @@ class TelaLocalOrigem2(Screen):
 
 class TelaLocalOrigem1(Screen):
     def on_press_avancar(self):
-        if self.manager.get_screen('telalocalorigem1').ids.desc_origem1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
-            App.get_running_app().root.current = 'telalocaldestino1'
+        if self.manager.get_screen('telalocalorigem1').ids.botao_origem1.text == "Avançar":
+            if self.manager.get_screen('telalocalorigem1').ids.desc_origem1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                App.get_running_app().root.current = 'telalocaldestino1'
+        else:
+            if self.manager.get_screen('telalocalorigem1').ids.desc_origem1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                self.manager.get_screen('telaprerota1').ids.local_origem_op1.text = self.manager.get_screen('telalocalorigem1').ids.local_origem1.text
+                self.manager.get_screen('telaprerota1').ids.local_origem_op1.focus = False
+                App.get_running_app().root.current = 'telaprerota1'
+
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'teladeslocamento1'
+        if self.manager.get_screen('telalocalorigem1').ids.botao_origem1.text == "Avançar":
+            self.manager.get_screen('telalocalorigem1').ids.local_origem1.text = ""
+            App.get_running_app().root.current = 'teladeslocamento1'
+
+        else:
+            self.manager.get_screen('telaprerota1').ids.local_origem_op1.focus = False
+            self.manager.get_screen('telalocalorigem1').ids.local_origem1.text = self.manager.get_screen('telaprerota1').ids.local_origem_op1.text
+            App.get_running_app().root.current = 'telaprerota1'
+
 
     def on_press_sair(self):
         global ultimatela
@@ -857,11 +1236,23 @@ class TelaLocalOrigem1(Screen):
 
 class TelaMaterial2(Screen):
     def on_press_avancar(self):
-        if self.manager.get_screen('telamaterial2').ids.desc_material.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Material Inexistente...[/color]', '[color=FF0000]Material Desativado...[/color]']:
-            App.get_running_app().root.current = 'telaquantidade2'
+        if self.manager.get_screen('telamaterial2').ids.botao_material2.text == "Avançar":
+            if self.manager.get_screen('telamaterial2').ids.desc_material.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Material Inexistente...[/color]', '[color=FF0000]Material Desativado...[/color]']:
+                App.get_running_app().root.current = 'telaquantidade2'
+        else:
+            if self.manager.get_screen('telamaterial2').ids.desc_material.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Material Inexistente...[/color]','[color=FF0000]Material Desativado...[/color]']:
+                self.manager.get_screen('telaprerota2').ids.material_op2.text = self.manager.get_screen('telamaterial2').ids.cod_material.text
+                self.manager.get_screen('telaprerota2').ids.material_op2.focus = False
+                App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'telalocalorigem2'
+        if self.manager.get_screen('telamaterial2').ids.botao_material2.text == "Avançar":
+            self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
+            App.get_running_app().root.current = 'telalocalorigem2'
+        else:
+            self.manager.get_screen('telaprerota2').ids.material_op2.focus = False
+            self.manager.get_screen('telamaterial2').ids.cod_material.text = self.manager.get_screen('telaprerota2').ids.material_op2.text
+            App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_sair(self):
         global ultimatela
@@ -896,7 +1287,7 @@ class TelaQuantidade2(Screen):
         self.qtd_material = ''
         self.equipamento_atual = ()
         self.capacidade_equipamento = ()
-        self.qtd_material_ton = 0.0
+        self.qtd_material_kg = 0.0
 
     def is_float(self, string):
         try:
@@ -917,12 +1308,39 @@ class TelaQuantidade2(Screen):
 
 
     def on_press_avancar(self):
-        if self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text == '':
-            print(self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text)
-            App.get_running_app().root.current = 'telalocaldestino2'
+        if self.manager.get_screen('telaquantidade2').ids.botao_quantidade2.text == "Avançar":
+            if self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text not in ['[color=FF0000]Qtd. Excede a Cap. Máxima[/color]', '[color=FF0000]Especificar Unid/Qtd.[/color]']:
+                App.get_running_app().root.current = 'telalocaldestino2'
+        else:
+            if self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text not in ['[color=FF0000]Qtd. Excede a Cap. Máxima[/color]', '[color=FF0000]Especificar Unid/Qtd.[/color]']:
+                self.manager.get_screen('telaprerota2').ids.quantidade_op2.text = self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text[(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('0]')+2):(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('[/'))]
+                self.manager.get_screen('telaprerota2').ids.quantidade_op2.focus = False
+                App.get_running_app().root.current = 'telaprerota2'
+
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'telamaterial2'
+        if self.manager.get_screen('telaquantidade2').ids.botao_quantidade2.text == "Avançar":
+            self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = ""
+            self.manager.get_screen('telaquantidade2').ids.m3.state = 'normal'
+            self.manager.get_screen('telaquantidade2').ids.kg.state = 'normal'
+            self.manager.get_screen('telaquantidade2').ids.un.state = 'normal'
+            App.get_running_app().root.current = 'telamaterial2'
+        else:
+            self.manager.get_screen('telaprerota2').ids.quantidade_op2.focus = False
+            self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = self.manager.get_screen('telaprerota2').ids.quantidade_op2.text[:self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' M' or ' K' or ' U')]
+            if self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' M') != -1:
+                self.manager.get_screen('telaquantidade2').ids.m3.state = 'down'
+                self.manager.get_screen('telaquantidade2').ids.kg.state = 'normal'
+                self.manager.get_screen('telaquantidade2').ids.un.state = 'normal'
+            if self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' K') != -1:
+                self.manager.get_screen('telaquantidade2').ids.m3.state = 'normal'
+                self.manager.get_screen('telaquantidade2').ids.kg.state = 'down'
+                self.manager.get_screen('telaquantidade2').ids.un.state = 'normal'
+            if self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' U') != -1:
+                self.manager.get_screen('telaquantidade2').ids.m3.state = 'normal'
+                self.manager.get_screen('telaquantidade2').ids.kg.state = 'normal'
+                self.manager.get_screen('telaquantidade2').ids.un.state = 'down'
+            App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_sair(self):
         global ultimatela
@@ -942,14 +1360,14 @@ class TelaQuantidade2(Screen):
                         'telaquantidade2').ids.validador_quantidade.text = "[color=FF0000]Qtd. Excede a Cap. Máxima[/color]"
                 else:
                     self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material.replace('.', ','), self.unidade))
-            if self.unidade == 'TON.':
-                self.qtd_material_ton = self.qtd_material.replace('.', ',')
+            if self.unidade == 'KG.':
+                self.qtd_material_kg = self.qtd_material.replace('.', ',')
                 qtd_material_convertida = float(self.qtd_material)/self.densidade_material[0]
                 if self.capacidade_equipamento[0] < qtd_material_convertida:
                     self.manager.get_screen(
                         'telaquantidade2').ids.validador_quantidade.text = "[color=FF0000]Qtd. Excede a Cap. Máxima[/color]"
                 else:
-                    self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material_ton, self.unidade))
+                    self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material_kg, self.unidade))
 
             if self.unidade == 'UN.':
                 self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material.replace('.', ','), self.unidade))
@@ -994,14 +1412,14 @@ class TelaQuantidade2(Screen):
                             'telaquantidade2').ids.validador_quantidade.text = "[color=FF0000]Qtd. Excede a Cap. Máxima[/color]"
                 else:
                     self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material.replace('.', ','), self.unidade))
-            if self.unidade == 'TON.':
-                self.qtd_material_ton = self.qtd_material.replace('.', ',')
+            if self.unidade == 'KG.':
+                self.qtd_material_kg = self.qtd_material.replace('.', ',')
                 qtd_material_convertida = float(self.qtd_material)/self.densidade_material[0] #CONVERTE P/ M3
                 if self.capacidade_equipamento[0] < qtd_material_convertida:
                     self.manager.get_screen(
                         'telaquantidade2').ids.validador_quantidade.text = "[color=FF0000]Qtd. Excede a Cap. Máxima[/color]"
                 else:
-                    self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material_ton, self.unidade))
+                    self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material_kg, self.unidade))
 
             if self.unidade == 'UN.':
                 self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text = ("[color=00FF00]%s %s[/color]" % (self.qtd_material.replace('.', ','), self.unidade))
@@ -1012,10 +1430,52 @@ class TelaQuantidade2(Screen):
 class TelaLocalDestino1(Screen):
 
     def on_press_avancar(self):
-        pass
+        if self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text == "Avançar":
+            if self.manager.get_screen('telalocaldestino1').ids.desc_destino1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                if self.manager.get_screen('telalocalorigem1').ids.local_origem1.text != "":
+                    self.manager.get_screen('telaprerota1').ids.local_origem_op1.text = self.manager.get_screen('telalocalorigem1').ids.local_origem1.text
+                    self.manager.get_screen('telaprerota1').ids.local_destino_op1.text = self.manager.get_screen('telalocaldestino1').ids.local_destino1.text
+                    self.manager.get_screen('telaprerota1').ids.hora_op1.text = time.strftime('%H:%M')
+                    App.get_running_app().root.current = 'telaprerota1'
+                elif self.manager.get_screen('telalocalorigem1').ids.local_origem1.text == "":
+                    self.manager.get_screen('telaprerota1').ids.local_destino_op1.text = self.manager.get_screen('telalocaldestino1').ids.local_destino1.text
+                    self.manager.get_screen('telaprerota1').ids.hora_op1.text = time.strftime('%H:%M')
+                    self.manager.get_screen('telaprerota1').ids.local_origem1_text.disabled = True
+                    self.manager.get_screen('telaprerota1').ids.local_origem1_text.opacity = 0
+                    self.manager.get_screen('telaprerota1').ids.local_origem_op1.disabled = True
+                    self.manager.get_screen('telaprerota1').ids.local_origem_op1.opacity = 0
+                    self.manager.get_screen('telaprerota1').ids.local_destino1_text.pos_hint = {"x": .06, "y": .70}
+                    self.manager.get_screen('telaprerota1').ids.local_destino_op1.pos_hint = {"x": .48, "y": .695}
+                    self.manager.get_screen('telaprerota1').ids.hora1_text.pos_hint = {"x": .06, "y": .60}
+                    self.manager.get_screen('telaprerota1').ids.hora_op1.pos_hint = {"x": .48, "y": .595}
+                    self.manager.get_screen('telaprerota1').ids.km1_text.pos_hint = {"x": .06, "y": .50}
+                    self.manager.get_screen('telaprerota1').ids.km_op1.pos_hint = {"x": .48, "y": .495}
+                    self.manager.get_screen('telaprerota1').ids.nivel1_text.pos_hint = {"x": .06, "y": .40}
+                    self.manager.get_screen('telaprerota1').ids.nivel_op1.pos_hint = {"x": .48, "y": .395}
+                    App.get_running_app().root.current = 'telaprerota1'
+
+
+        elif self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text == "Alterar":
+            if self.manager.get_screen('telalocaldestino1').ids.desc_destino1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                self.manager.get_screen('telaprerota1').ids.local_destino_op1.text = self.manager.get_screen('telalocaldestino1').ids.local_destino1.text
+                self.manager.get_screen('telaprerota1').ids.local_destino_op1.focus = False
+                App.get_running_app().root.current = 'telaprerota1'
+
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'telainicial'
+        if self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text == "Avançar":
+            self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = ""
+            if self.manager.get_screen('telalocalorigem1').ids.local_origem1.text == "":
+                App.get_running_app().root.current = 'teladeslocamento1'
+            else:
+                App.get_running_app().root.current = 'telalocalorigem1'
+
+        else:
+            self.manager.get_screen('telaprerota1').ids.local_destino_op1.focus = False
+            self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = self.manager.get_screen('telaprerota1').ids.local_destino_op1.text
+            App.get_running_app().root.current = 'telaprerota1'
+
+
 
     def on_press_sair(self):
         global ultimatela
@@ -1043,10 +1503,30 @@ class TelaLocalDestino1(Screen):
 
 class TelaLocalDestino2(Screen):
     def on_press_avancar(self):
-        pass
+        if self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text == "Avançar":
+            if self.manager.get_screen('telalocaldestino2').ids.desc_destino2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                if self.manager.get_screen('telalocalorigem2').ids.local_origem2.text != "":
+                    self.manager.get_screen('telaprerota2').ids.local_origem_op2.text = self.manager.get_screen('telalocalorigem2').ids.local_origem2.text
+                    self.manager.get_screen('telaprerota2').ids.local_destino_op2.text = self.manager.get_screen('telalocaldestino2').ids.local_destino2.text
+                    self.manager.get_screen('telaprerota2').ids.material_op2.text = self.manager.get_screen('telamaterial2').ids.cod_material.text
+                    self.manager.get_screen('telaprerota2').ids.quantidade_op2.text = self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text[(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('0]')+2):(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('[/'))]
+                    self.manager.get_screen('telaprerota2').ids.hora_op2.text = time.strftime('%H:%M')
+                    App.get_running_app().root.current = 'telaprerota2'
+
+        elif self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text == "Alterar":
+            if self.manager.get_screen('telalocaldestino2').ids.desc_destino2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
+                self.manager.get_screen('telaprerota2').ids.local_destino_op2.text = self.manager.get_screen('telalocaldestino2').ids.local_destino2.text
+                self.manager.get_screen('telaprerota2').ids.local_destino_op2.focus = False
+                App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
-        App.get_running_app().root.current = 'telaquantidade2'
+        if self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text == "Avançar":
+            self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
+            App.get_running_app().root.current = 'telaquantidade2'
+        else:
+            self.manager.get_screen('telaprerota2').ids.local_destino_op2.focus = False
+            self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = self.manager.get_screen('telaprerota2').ids.local_destino_op2.text
+            App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_sair(self):
         global ultimatela
@@ -1089,7 +1569,6 @@ class TelaDeslocamento1(Screen):
         App.get_running_app().root.current = 'telasair'
 
 class TelaSelecionarEquipamento(Screen):
-
     def on_press_alterar(self):
         if self.manager.get_screen('telaselecionarequipamento').ids.desc_equipamento.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Equipamento Inexistente...[/color]','[color=FF0000]Equipamento Desativado...[/color]']:
             novo_equipamento = self.manager.get_screen('telaselecionarequipamento').ids.novo_equipamento.text
@@ -1141,25 +1620,135 @@ class RelogioDigital(Label):
         self.font_name = "consola"
         self.font_size = "25sp"
 
+class ResumoInfo1(Screen):
+
+    def on_press_iniciar(self):
+        pass
+
+    def on_press_cancelar(self):
+        global ultimatela_cancela
+        ultimatela_cancela = 'telaprerota1'
+        App.get_running_app().root.current = 'telacancelar'
+
+    def ao_focar1(self):
+        self.manager.get_screen('telalocalorigem1').ids.botao_origem1.text = "Alterar"
+        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.disabled = True
+        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.opacity = 0
+        App.get_running_app().root.current = 'telalocalorigem1'
+
+    def ao_focar2(self):
+        self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text = "Alterar"
+        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.disabled = True
+        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.opacity = 0
+        App.get_running_app().root.current = 'telalocaldestino1'
+
+class ResumoInfo2(Screen):
+
+    def on_press_iniciar(self):
+        pass
+
+    def on_press_cancelar(self):
+        global ultimatela_cancela
+        ultimatela_cancela = 'telaprerota2'
+        App.get_running_app().root.current = 'telacancelar'
+
+    def ao_focar1(self):
+        self.manager.get_screen('telalocalorigem2').ids.botao_origem2.text = "Alterar"
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.disabled = True
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.opacity = 0
+        App.get_running_app().root.current = 'telalocalorigem2'
+
+    def ao_focar2(self):
+        self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text = "Alterar"
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.disabled = True
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.opacity = 0
+        App.get_running_app().root.current = 'telalocaldestino2'
+
+    def ao_focar3(self):
+        self.manager.get_screen('telamaterial2').ids.botao_material2.text = "Alterar"
+        self.manager.get_screen('telamaterial2').ids.sair_material2.disabled = True
+        self.manager.get_screen('telamaterial2').ids.sair_material2.opacity = 0
+        App.get_running_app().root.current = 'telamaterial2'
+
+    def ao_focar4(self):
+        self.manager.get_screen('telaquantidade2').ids.botao_quantidade2.text = "Alterar"
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.disabled = True
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.opacity = 0
+        App.get_running_app().root.current = 'telaquantidade2'
+
+
+class TelaCancelar(Screen):
+    global ultimatela_cancela
+
+    def on_press_sim(self):
+        self.manager.get_screen('telaprerota1').ids.local_origem1_text.disabled = False
+        self.manager.get_screen('telaprerota1').ids.local_origem1_text.opacity = 1
+        self.manager.get_screen('telaprerota1').ids.local_origem_op1.disabled = False
+        self.manager.get_screen('telaprerota1').ids.local_origem_op1.opacity = 1
+        self.manager.get_screen('telaprerota1').ids.local_origem1_text.pos_hint = {"x": .06, "y": .70}
+        self.manager.get_screen('telaprerota1').ids.local_origem_op1.pos_hint = {"x": .48, "y": .695}
+        self.manager.get_screen('telaprerota1').ids.local_destino1_text.pos_hint = {"x": .06, "y": .60}
+        self.manager.get_screen('telaprerota1').ids.local_destino_op1.pos_hint = {"x": .48, "y": .595}
+        self.manager.get_screen('telaprerota1').ids.hora1_text.pos_hint = {"x": .06, "y": .50}
+        self.manager.get_screen('telaprerota1').ids.hora_op1.pos_hint = {"x": .48, "y": .495}
+        self.manager.get_screen('telaprerota1').ids.km1_text.pos_hint = {"x": .06, "y": .40}
+        self.manager.get_screen('telaprerota1').ids.km_op1.pos_hint = {"x": .48, "y": .395}
+        self.manager.get_screen('telaprerota1').ids.nivel1_text.pos_hint = {"x": .06, "y": .30}
+        self.manager.get_screen('telaprerota1').ids.nivel_op1.pos_hint = {"x": .48, "y": .295}
+        self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text = "Avançar"
+        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.disabled = False
+        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.opacity = 1
+        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.disabled = False
+        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.opacity = 1
+        self.manager.get_screen('telalocalorigem1').ids.local_origem1.text = ""
+        self.manager.get_screen('telalocalorigem2').ids.local_origem2.text = ""
+        self.manager.get_screen('telalocalorigem2').ids.botao_origem2.text = "Avançar"
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.disabled = False
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.opacity = 1
+        self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text = "Avançar"
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.disabled = False
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.opacity = 1
+        self.manager.get_screen('telamaterial2').ids.botao_material2.text = "Avançar"
+        self.manager.get_screen('telamaterial2').ids.sair_material2.disabled = False
+        self.manager.get_screen('telamaterial2').ids.sair_material2.opacity = 1
+        self.manager.get_screen('telaquantidade2').ids.botao_quantidade2.text = "Avançar"
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.disabled = False
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.opacity = 1
+        self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = ""
+        self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
+        self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = ""
+        self.manager.get_screen('telaquantidade2').ids.m3.state = "normal"
+        self.manager.get_screen('telaquantidade2').ids.kg.state = "normal"
+        self.manager.get_screen('telaquantidade2').ids.un.state = "normal"
+        self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
+        self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = True
+        self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 0
+        self.manager.get_screen('telalocalorigem1').ids.botao_origem1.text = "Avançar"
+        App.get_running_app().root.current = 'telainicial'
+
+    def on_press_nao(self):
+        App.get_running_app().root.current = ultimatela_cancela
+
 
 class TelaSair(Screen):
     global ultimatela
 
     def on_press_sim(self):
-        App.get_running_app().root.current = 'telalogin'
         self.manager.get_screen('telalogin').ids.usuario.text = ""
         self.manager.get_screen('telalogin').ids.senha.text = ""
         self.manager.get_screen('telalocalorigem1').ids.local_origem1.text = ""
         self.manager.get_screen('telalocalorigem2').ids.local_origem2.text = ""
         self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = ""
+        self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
         self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
         self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = ""
         self.manager.get_screen('telaquantidade2').ids.m3.state = "normal"
-        self.manager.get_screen('telaquantidade2').ids.ton.state = "normal"
+        self.manager.get_screen('telaquantidade2').ids.kg.state = "normal"
         self.manager.get_screen('telaquantidade2').ids.un.state = "normal"
         self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
         self.manager.get_screen('telainicial').ids.botao_equipamento.disabled = True
         self.manager.get_screen('telainicial').ids.botao_equipamento.opacity = 0
+        App.get_running_app().root.current = 'telalogin'
 
     def on_press_nao(self):
         App.get_running_app().root.current = ultimatela
@@ -1197,8 +1786,11 @@ class TechRoadMain(Screen):
 
 gt = ScreenManager()  # GERENCIADOR DE TELAS
 gt.add_widget(TechRoadLogin(name='telalogin'))
+gt.add_widget(ResumoInfo1(name='telaprerota1'))
+gt.add_widget(ResumoInfo2(name='telaprerota2'))
 gt.add_widget(TechRoadMain(name='telainicial'))
 gt.add_widget(TelaSair(name='telasair'))
+gt.add_widget(TelaCancelar(name='telacancelar'))
 gt.add_widget(TelaLocalOrigem2(name='telalocalorigem2'))
 gt.add_widget(TelaLocalDestino1(name='telalocaldestino1'))
 gt.add_widget(TelaLocalOrigem1(name='telalocalorigem1'))

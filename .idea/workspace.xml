@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/database/startsql.sql" />
+    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
+      <change beforePath="" afterPath="$PROJECT_DIR$/front_end/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/.idea/techroad_appmobile.iml" afterPath="$PROJECT_DIR$/.idea/techroad_appmobile.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/database/startsql.sql" afterPath="$PROJECT_DIR$/database/startsql.sql" />
       <change beforePath="$PROJECT_DIR$/front_end/controler.py" afterPath="$PROJECT_DIR$/front_end/controler.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +18,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pytruck$controler__1_.coverage" NAME="controler (1) Coverage Results" MODIFIED="1522107752218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_alternativo" />
     <SUITE FILE_PATH="coverage/techroad$controler.coverage" NAME="controler Coverage Results" MODIFIED="1524676832043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front" />
-    <SUITE FILE_PATH="coverage/techroad_appmobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1527020504171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/techroad_appmobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1530096037382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
     <SUITE FILE_PATH="coverage/techroad$controler__3_.coverage" NAME="controler (3) Coverage Results" MODIFIED="1524681166526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mobile/front_end" />
     <SUITE FILE_PATH="coverage/pytruck$main.coverage" NAME="main Coverage Results" MODIFIED="1521655866807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/pytruck$screenmanager.coverage" NAME="screenmanager Coverage Results" MODIFIED="1522106800437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/screenmanager" />
@@ -40,24 +41,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="techroadlocal.db" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="techroadlocal.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="techroadlocal.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="techroadlocal.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="auth_user: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -66,36 +49,30 @@
       <file leaf-file-name="controler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front_end/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="727" column="41" lean-forward="false" selection-start-line="727" selection-start-column="41" selection-end-line="727" selection-end-column="41" />
+            <state relative-caret-position="110">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
-                <element signature="e#171#195#0" expanded="true" />
-                <marker date="1527020504154" expanded="true" signature="21885:21930" ph="SELECT EMAIL... auth_user" />
-                <marker date="1527020504154" expanded="true" signature="22125:22174" ph="SELECT EMAIL... auth_user" />
-                <marker date="1527020504154" expanded="true" signature="22652:22701" ph="SELECT GROUP... auth_user" />
-                <marker date="1527020504154" expanded="true" signature="23735:23796" ph="SELECT DESCR... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="23864:23922" ph="SELECT ESTAD... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="25408:25469" ph="SELECT DESCR... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="25537:25595" ph="SELECT ESTAD... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="27084:27101" ph="SELECT DESCR... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="27084:27154" ph="SELECT DESCR... tb_material" />
-                <marker date="1527020504154" expanded="true" signature="27225:27292" ph="SELECT ESTAD... tb_material" />
-                <marker date="1527020504154" expanded="true" signature="31186:31243" ph="SELECT EQUIP... tb_config" />
-                <marker date="1527020504154" expanded="true" signature="31384:31454" ph="SELECT CAPAC... tb_equipamento" />
-                <marker date="1527020504154" expanded="true" signature="31384:31455" ph="SELECT EQUIP... tb_config" />
-                <marker date="1527020504154" expanded="true" signature="31384:31459" ph="SELECT CAPAC... tb_equipamento" />
-                <marker date="1527020504154" expanded="true" signature="31384:31486" ph="SELECT CAPAC... tb_equipamento" />
-                <marker date="1527020504154" expanded="true" signature="31712:31784" ph="SELECT DENSI... tb_material" />
-                <marker date="1527020504154" expanded="true" signature="34313:34374" ph="SELECT * FRO... tb_locais" />
-                <marker date="1527020504154" expanded="true" signature="34442:34500" ph="SELECT ESTAD... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="35716:35777" ph="SELECT DESCR... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="35845:35903" ph="SELECT ESTAD... tb_local" />
-                <marker date="1527020504154" expanded="true" signature="37639:37677" ph="UPDATE tb_config... " />
-                <marker date="1527020504154" expanded="true" signature="37639:37699" ph="UPDATE tb_config... " />
-                <marker date="1527020504154" expanded="true" signature="37639:37724" ph="UPDATE tb_config... " />
-                <marker date="1527020504154" expanded="true" signature="38108:38165" ph="SELECT EQUIP... tb_config" />
-                <marker date="1527020504154" expanded="true" signature="38228:38307" ph="SELECT DESCR... tb_equipamento" />
-                <marker date="1527020504154" expanded="true" signature="38381:38457" ph="SELECT ESTAD... tb_equipamento" />
+                <element signature="e#197#221#0" expanded="true" />
+                <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
+                <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
+                <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
+                <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
+                <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
+                <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
+                <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
+                <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
+                <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
+                <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
+                <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
+                <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
+                <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
               </folding>
             </state>
           </provider>
@@ -104,8 +81,8 @@
       <file leaf-file-name="visualclass.kv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front_end/visualclass.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="176">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -114,8 +91,8 @@
       <file leaf-file-name="startsql.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/startsql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="110">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,36 +109,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>local</find>
-      <find>desc_destino2</find>
-      <find>Telalocalorigem2</find>
-      <find>validador</find>
-      <find>quantidade</find>
-      <find>desc_equipamento</find>
-      <find>telasele</find>
-      <find>Veiculo</find>
-      <find>selveiculo</find>
-      <find>Equipamento</find>
-      <find>Cod.</find>
-      <find>atual</find>
-      <find>equi</find>
-      <find>equipamento</find>
-      <find>novo_equipamento</find>
-      <find>error</find>
-      <find>50sp</find>
-      <find>M3</find>
-      <find>TON.</find>
-      <find>UND</find>
-      <find>UN</find>
-      <find>UND.</find>
-      <find>UN.</find>
-      <find>material</find>
-      <find>telalogin</find>
-      <find>validador_logi</find>
-      <find>equip</find>
-      <find>botao</find>
-      <find>tela</find>
-      <find>grupo[]</find>
+      <find>material_op2</find>
+      <find>unidade</find>
+      <find>hora_op1</find>
+      <find>hora_op2</find>
+      <find>ResumoInfo2</find>
+      <find>TelaLocalDestino1</find>
+      <find>sair_destino1</find>
+      <find>sair_destino2</find>
+      <find>super</find>
+      <find>botao_origem1</find>
+      <find>botao_origem2</find>
+      <find>ao_focar3</find>
+      <find>botao_material2</find>
+      <find>Telamaterial2</find>
+      <find>on_focus</find>
+      <find>TelaQuantidade</find>
+      <find>Telaquantidade</find>
+      <find>botao_quantidade2</find>
+      <find>quantidade_op2</find>
+      <find>TelaQuan</find>
+      <find>press</find>
+      <find>ton</find>
+      <find>KG</find>
+      <find>to</find>
+      <find>kg</find>
+      <find>Butkg</find>
+      <find>TelaMaterial2</find>
+      <find>telamaterial</find>
+      <find>#aqui</find>
+      <find>local_destino2</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -171,6 +148,11 @@
       <replace>MATERIAL</replace>
       <replace>desc_material</replace>
       <replace>selequipamento</replace>
+      <replace>.08</replace>
+      <replace>.06</replace>
+      <replace>ao_focar1</replace>
+      <replace>kg</replace>
+      <replace>Button</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Anaconda\envs\k36</dir>
@@ -211,8 +193,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="21" />
-    <option name="y" value="37" />
+    <option name="x" value="-8" />
+    <option name="y" value="77" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -232,6 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,29 +232,28 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)&#10;Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\DEV\techroad\mobile" />
-      <recent name="C:\DEV\pytruck\examples" />
-      <recent name="C:\DEV\pytruck\front" />
-      <recent name="C:\DEV\pytruck\back" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\DEV\techroad_appmobile\database" />
       <recent name="C:\DEV\pytruck" />
       <recent name="C:\DEV\pytruck\back" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DEV\techroad_appmobile\front_end" />
+      <recent name="C:\DEV\techroad_appmobile" />
+      <recent name="C:\DEV\techroad\mobile" />
+      <recent name="C:\DEV\pytruck\examples" />
+      <recent name="C:\DEV\pytruck\front" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -712,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526929215974</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
+      <created>1527020585337</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1527020585337</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -725,23 +715,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.506079" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32072368" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17763157" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.137538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15506808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15577507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -832,33 +822,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#171#195#0" expanded="true" />
-            <marker date="1527020504154" expanded="true" signature="21885:21930" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22125:22174" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22652:22701" ph="SELECT GROUP... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="23735:23796" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="23864:23922" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25408:25469" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25537:25595" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27101" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27154" ph="SELECT DESCR... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="27225:27292" ph="SELECT ESTAD... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="31186:31243" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31454" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31455" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31459" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31486" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31712:31784" ph="SELECT DENSI... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="34313:34374" ph="SELECT * FRO... tb_locais" />
-            <marker date="1527020504154" expanded="true" signature="34442:34500" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35716:35777" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35845:35903" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="37639:37677" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37699" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37724" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="38108:38165" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="38228:38307" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="38381:38457" ph="SELECT ESTAD... tb_equipamento" />
+            <element signature="e#197#221#0" expanded="true" />
+            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
+            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
           </folding>
         </state>
       </provider>
@@ -868,69 +852,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#171#195#0" expanded="true" />
-            <marker date="1527020504154" expanded="true" signature="21885:21930" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22125:22174" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22652:22701" ph="SELECT GROUP... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="23735:23796" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="23864:23922" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25408:25469" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25537:25595" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27101" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27154" ph="SELECT DESCR... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="27225:27292" ph="SELECT ESTAD... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="31186:31243" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31454" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31455" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31459" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31486" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31712:31784" ph="SELECT DENSI... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="34313:34374" ph="SELECT * FRO... tb_locais" />
-            <marker date="1527020504154" expanded="true" signature="34442:34500" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35716:35777" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35845:35903" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="37639:37677" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37699" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37724" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="38108:38165" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="38228:38307" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="38381:38457" ph="SELECT ESTAD... tb_equipamento" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front_end/controler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#171#195#0" expanded="true" />
-            <marker date="1527020504154" expanded="true" signature="21885:21930" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22125:22174" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22652:22701" ph="SELECT GROUP... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="23735:23796" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="23864:23922" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25408:25469" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25537:25595" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27101" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27154" ph="SELECT DESCR... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="27225:27292" ph="SELECT ESTAD... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="31186:31243" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31454" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31455" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31459" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31486" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31712:31784" ph="SELECT DENSI... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="34313:34374" ph="SELECT * FRO... tb_locais" />
-            <marker date="1527020504154" expanded="true" signature="34442:34500" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35716:35777" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35845:35903" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="37639:37677" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37699" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37724" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="38108:38165" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="38228:38307" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="38381:38457" ph="SELECT ESTAD... tb_equipamento" />
+            <element signature="e#197#221#0" expanded="true" />
+            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
+            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
           </folding>
         </state>
       </provider>
@@ -1056,54 +998,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../techroad_web/web2py.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/startsql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="110">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front_end/visualclass.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="176">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front_end/controler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="727" column="41" lean-forward="false" selection-start-line="727" selection-start-column="41" selection-end-line="727" selection-end-column="41" />
+        <state relative-caret-position="110">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding>
-            <element signature="e#171#195#0" expanded="true" />
-            <marker date="1527020504154" expanded="true" signature="21885:21930" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22125:22174" ph="SELECT EMAIL... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="22652:22701" ph="SELECT GROUP... auth_user" />
-            <marker date="1527020504154" expanded="true" signature="23735:23796" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="23864:23922" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25408:25469" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="25537:25595" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27101" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="27084:27154" ph="SELECT DESCR... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="27225:27292" ph="SELECT ESTAD... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="31186:31243" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31454" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31455" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="31384:31459" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31384:31486" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="31712:31784" ph="SELECT DENSI... tb_material" />
-            <marker date="1527020504154" expanded="true" signature="34313:34374" ph="SELECT * FRO... tb_locais" />
-            <marker date="1527020504154" expanded="true" signature="34442:34500" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35716:35777" ph="SELECT DESCR... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="35845:35903" ph="SELECT ESTAD... tb_local" />
-            <marker date="1527020504154" expanded="true" signature="37639:37677" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37699" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="37639:37724" ph="UPDATE tb_config... " />
-            <marker date="1527020504154" expanded="true" signature="38108:38165" ph="SELECT EQUIP... tb_config" />
-            <marker date="1527020504154" expanded="true" signature="38228:38307" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1527020504154" expanded="true" signature="38381:38457" ph="SELECT ESTAD... tb_equipamento" />
+            <element signature="e#197#221#0" expanded="true" />
+            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
+            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
+            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
+            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
+            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
+            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
+            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
           </folding>
         </state>
       </provider>
