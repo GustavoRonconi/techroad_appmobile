@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
-      <change beforePath="" afterPath="$PROJECT_DIR$/front_end/favicon.ico" />
-      <change beforePath="$PROJECT_DIR$/.idea/techroad_appmobile.iml" afterPath="$PROJECT_DIR$/.idea/techroad_appmobile.iml" />
+    <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/database/startsql.sql" afterPath="$PROJECT_DIR$/database/startsql.sql" />
       <change beforePath="$PROJECT_DIR$/front_end/controler.py" afterPath="$PROJECT_DIR$/front_end/controler.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +15,17 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pytruck$controler__1_.coverage" NAME="controler (1) Coverage Results" MODIFIED="1522107752218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_alternativo" />
     <SUITE FILE_PATH="coverage/techroad$controler.coverage" NAME="controler Coverage Results" MODIFIED="1524676832043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front" />
-    <SUITE FILE_PATH="coverage/techroad_appmobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1530096037382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/techroad_appmobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1530137828900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/techroad_appmobile$controler__1_.coverage" NAME="controler (1) Coverage Results" MODIFIED="1533053552408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/pytruck$screenmanager.coverage" NAME="screenmanager Coverage Results" MODIFIED="1522106800437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/screenmanager" />
+    <SUITE FILE_PATH="coverage/techroad_appmobile$main.coverage" NAME="main Coverage Results" MODIFIED="1530137886775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/techroad_mobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1524681968497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
+    <SUITE FILE_PATH="coverage/techroad_appmobile$cron_progressive.coverage" NAME="cron_progressive Coverage Results" MODIFIED="1532622428939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
     <SUITE FILE_PATH="coverage/techroad$controler__3_.coverage" NAME="controler (3) Coverage Results" MODIFIED="1524681166526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mobile/front_end" />
     <SUITE FILE_PATH="coverage/pytruck$main.coverage" NAME="main Coverage Results" MODIFIED="1521655866807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/pytruck$screenmanager.coverage" NAME="screenmanager Coverage Results" MODIFIED="1522106800437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/screenmanager" />
     <SUITE FILE_PATH="coverage/techroad$controler__2_.coverage" NAME="controler (2) Coverage Results" MODIFIED="1524664717755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front" />
     <SUITE FILE_PATH="coverage/techroad$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1524681154466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web/web2py" />
     <SUITE FILE_PATH="coverage/pytruck$controler.coverage" NAME="controler Coverage Results" MODIFIED="1524586696857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front" />
-    <SUITE FILE_PATH="coverage/techroad_mobile$controler__4_.coverage" NAME="controler (4) Coverage Results" MODIFIED="1524681968497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/front_end" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,31 +49,41 @@
       <file leaf-file-name="controler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front_end/controler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="458">
+              <caret line="1814" column="32" lean-forward="true" selection-start-line="1814" selection-start-column="32" selection-end-line="1814" selection-end-column="32" />
               <folding>
-                <element signature="e#197#221#0" expanded="true" />
-                <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
-                <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
-                <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
-                <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
-                <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
-                <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
-                <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
-                <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
-                <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
-                <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
-                <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
-                <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
-                <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
+                <element signature="e#183#207#0" expanded="true" />
+                <marker date="1533054281183" expanded="true" signature="35372:35417" ph="SELECT EMAIL... auth_user" />
+                <marker date="1533054281183" expanded="true" signature="35612:35661" ph="SELECT PASSW... auth_user" />
+                <marker date="1533054281183" expanded="true" signature="36139:36188" ph="SELECT GROUP... auth_user" />
+                <marker date="1533054281183" expanded="true" signature="38265:38326" ph="SELECT DESCR... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="38394:38452" ph="SELECT ESTAD... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="40904:40965" ph="SELECT DESCR... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="41033:41091" ph="SELECT ESTAD... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="43524:43594" ph="SELECT DESCR... tb_material" />
+                <marker date="1533054281183" expanded="true" signature="43665:43732" ph="SELECT ESTAD... tb_material" />
+                <marker date="1533054281183" expanded="true" signature="50117:50174" ph="SELECT EQUIP... tb_config" />
+                <marker date="1533054281183" expanded="true" signature="50315:50390" ph="SELECT CAPAC... tb_equipamento" />
+                <marker date="1533054281183" expanded="true" signature="50643:50715" ph="SELECT DENSI... tb_material" />
+                <marker date="1533054281183" expanded="true" signature="57006:57067" ph="SELECT DESCR... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="57135:57193" ph="SELECT ESTAD... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="60737:60798" ph="SELECT DESCR... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="60866:60924" ph="SELECT ESTAD... tb_local" />
+                <marker date="1533054281183" expanded="true" signature="62659:62719" ph="UPDATE tb_config... " />
+                <marker date="1533054281183" expanded="true" signature="63128:63185" ph="SELECT EQUIP... tb_config" />
+                <marker date="1533054281183" expanded="true" signature="63248:63327" ph="SELECT DESCR... tb_equipamento" />
+                <marker date="1533054281183" expanded="true" signature="63401:63477" ph="SELECT ESTAD... tb_equipamento" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cron_progressive.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front_end/cron_progressive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="99" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="99" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/database/startsql.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,36 +119,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>material_op2</find>
-      <find>unidade</find>
-      <find>hora_op1</find>
-      <find>hora_op2</find>
-      <find>ResumoInfo2</find>
-      <find>TelaLocalDestino1</find>
-      <find>sair_destino1</find>
-      <find>sair_destino2</find>
-      <find>super</find>
-      <find>botao_origem1</find>
-      <find>botao_origem2</find>
-      <find>ao_focar3</find>
-      <find>botao_material2</find>
-      <find>Telamaterial2</find>
+      <find>local_origem_op1</find>
+      <find>18f74CD</find>
+      <find>color=</find>
       <find>on_focus</find>
-      <find>TelaQuantidade</find>
-      <find>Telaquantidade</find>
-      <find>botao_quantidade2</find>
+      <find>on_press</find>
+      <find>local_destino_op1</find>
+      <find>local_origem_op2</find>
+      <find>local_destino_op2</find>
+      <find>material_op2</find>
       <find>quantidade_op2</find>
-      <find>TelaQuan</find>
-      <find>press</find>
-      <find>ton</find>
-      <find>KG</find>
-      <find>to</find>
-      <find>kg</find>
-      <find>Butkg</find>
-      <find>TelaMaterial2</find>
-      <find>telamaterial</find>
+      <find>on_press_selequipamento</find>
+      <find>comun</find>
+      <find>selequipamento</find>
+      <find>on_press_iniciar</find>
+      <find>on_press_avancar</find>
+      <find>ResumoInfo2</find>
+      <find>ResumoInfo1</find>
+      <find>TechRoadMain</find>
       <find>#aqui</find>
-      <find>local_destino2</find>
+      <find>temporota</find>
+      <find>cronometroid</find>
+      <find>cronid</find>
+      <find>iniciar</find>
+      <find>on_press_finalizar</find>
+      <find>voltar</find>
+      <find>comunicacao</find>
+      <find>equipamento</find>
+      <find>TelaSelecionarEquipamento</find>
+      <find>TelaComunicacao</find>
+      <find>ResumoRota</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -182,6 +192,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b3cdc0bc-52fa-4f7c-865c-0ac184ddbbaf/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e03e3e9e-5957-4e02-a949-f042d62b9632/console.sql" />
         <option value="$PROJECT_DIR$/database/startsql.sql" />
+        <option value="$PROJECT_DIR$/front_end/cron_progressive.py" />
         <option value="$PROJECT_DIR$/front_end/controler.py" />
       </list>
     </option>
@@ -214,8 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,12 +241,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../techroad_web" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)&#10;Sqlite (Xerial)" />
@@ -268,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.controler (4)">
+  <component name="RunManager" selected="Python.controler (1)">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -314,20 +325,20 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
     </configuration>
-    <configuration name="controler (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="controler (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/front" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/front_end" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="techroad" />
+      <module name="techroad_appmobile" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/front/controler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/front_end/controler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -365,45 +376,45 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="techroad_appmobile" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/front_end/controler.py" />
+      <option name="SCRIPT_NAME" value="C:\DEV\techroad_appmobile\front_end\controler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="controler" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Anaconda\envs\k36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/front" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="techroad" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/front/controler.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="web2py" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cron_progressive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web/web2py" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/front_end" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="techroad" />
+      <module name="techroad_appmobile" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/web2py/web2py.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/front_end/cron_progressive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/front_end" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="techroad_appmobile" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\DEV\techroad_appmobile\front_end\controler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -503,19 +514,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.controler" />
-      <item index="1" class="java.lang.String" itemvalue="Python.controler (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.web2py" />
-      <item index="3" class="java.lang.String" itemvalue="Python.controler (3)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.controler (4)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.controler (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.controler (4)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.controler (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cron_progressive" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.controler (4)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.controler (3)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.web2py" />
-        <item index="3" class="java.lang.String" itemvalue="Python.controler" />
-        <item index="4" class="java.lang.String" itemvalue="Python.controler (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.controler (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cron_progressive" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main" />
+        <item index="3" class="java.lang.String" itemvalue="Python.controler (4)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.controler (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -702,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527020585337</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
+      <created>1530096120318</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1530096120318</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -722,12 +740,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.506079" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17763157" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20723684" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.137538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14145234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15577507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14741641" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -739,30 +756,35 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23404256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256579" sideWeight="0.506079" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3256579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20723684" sideWeight="0.49392098" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14145234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14741641" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -822,57 +844,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#197#221#0" expanded="true" />
-            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
-            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front_end/controler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#197#221#0" expanded="true" />
-            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
-            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
+            <element signature="e#183#207#0" expanded="true" />
+            <marker date="1533054281183" expanded="true" signature="35372:35417" ph="SELECT EMAIL... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="35612:35661" ph="SELECT PASSW... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="36139:36188" ph="SELECT GROUP... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="38265:38326" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="38394:38452" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="40904:40965" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="41033:41091" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="43524:43594" ph="SELECT DESCR... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="43665:43732" ph="SELECT ESTAD... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="50117:50174" ph="SELECT EQUIP... tb_config" />
+            <marker date="1533054281183" expanded="true" signature="50315:50390" ph="SELECT CAPAC... tb_equipamento" />
+            <marker date="1533054281183" expanded="true" signature="50643:50715" ph="SELECT DENSI... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="57006:57067" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="57135:57193" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="60737:60798" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="60866:60924" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="62659:62719" ph="UPDATE tb_config... " />
+            <marker date="1533054281183" expanded="true" signature="63128:63185" ph="SELECT EQUIP... tb_config" />
+            <marker date="1533054281183" expanded="true" signature="63248:63327" ph="SELECT DESCR... tb_equipamento" />
+            <marker date="1533054281183" expanded="true" signature="63401:63477" ph="SELECT ESTAD... tb_equipamento" />
           </folding>
         </state>
       </provider>
@@ -908,13 +900,6 @@
     <entry file="file://$PROJECT_DIR$/front_old/visualclass.kv" />
     <entry file="file://$PROJECT_DIR$/front_old/controler.py" />
     <entry file="file://$PROJECT_DIR$/front_old/pytruck.kv" />
-    <entry file="file://$PROJECT_DIR$/examples/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/login.kv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
@@ -1009,8 +994,15 @@
     <entry file="file://$PROJECT_DIR$/database/startsql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1022,32 +1014,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front_end/cron_progressive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="99" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front_end/controler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="458">
+          <caret line="1814" column="32" lean-forward="true" selection-start-line="1814" selection-start-column="32" selection-end-line="1814" selection-end-column="32" />
           <folding>
-            <element signature="e#197#221#0" expanded="true" />
-            <marker date="1530096098704" expanded="true" signature="32094:32139" ph="SELECT EMAIL... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32334:32383" ph="SELECT PASSW... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="32861:32910" ph="SELECT GROUP... auth_user" />
-            <marker date="1530096098704" expanded="true" signature="35165:35226" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="35294:35352" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="37982:38043" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="38111:38169" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="40772:40842" ph="SELECT DESCR... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="40913:40980" ph="SELECT ESTAD... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="47539:47596" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="47737:47812" ph="SELECT CAPAC... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="48065:48137" ph="SELECT DENSI... tb_material" />
-            <marker date="1530096098704" expanded="true" signature="54564:54625" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="54693:54751" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58475:58536" ph="SELECT DESCR... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="58604:58662" ph="SELECT ESTAD... tb_local" />
-            <marker date="1530096098704" expanded="true" signature="60397:60457" ph="UPDATE tb_config... " />
-            <marker date="1530096098704" expanded="true" signature="60866:60923" ph="SELECT EQUIP... tb_config" />
-            <marker date="1530096098704" expanded="true" signature="60986:61065" ph="SELECT DESCR... tb_equipamento" />
-            <marker date="1530096098704" expanded="true" signature="61139:61215" ph="SELECT ESTAD... tb_equipamento" />
+            <element signature="e#183#207#0" expanded="true" />
+            <marker date="1533054281183" expanded="true" signature="35372:35417" ph="SELECT EMAIL... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="35612:35661" ph="SELECT PASSW... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="36139:36188" ph="SELECT GROUP... auth_user" />
+            <marker date="1533054281183" expanded="true" signature="38265:38326" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="38394:38452" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="40904:40965" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="41033:41091" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="43524:43594" ph="SELECT DESCR... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="43665:43732" ph="SELECT ESTAD... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="50117:50174" ph="SELECT EQUIP... tb_config" />
+            <marker date="1533054281183" expanded="true" signature="50315:50390" ph="SELECT CAPAC... tb_equipamento" />
+            <marker date="1533054281183" expanded="true" signature="50643:50715" ph="SELECT DENSI... tb_material" />
+            <marker date="1533054281183" expanded="true" signature="57006:57067" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="57135:57193" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="60737:60798" ph="SELECT DESCR... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="60866:60924" ph="SELECT ESTAD... tb_local" />
+            <marker date="1533054281183" expanded="true" signature="62659:62719" ph="UPDATE tb_config... " />
+            <marker date="1533054281183" expanded="true" signature="63128:63185" ph="SELECT EQUIP... tb_config" />
+            <marker date="1533054281183" expanded="true" signature="63248:63327" ph="SELECT DESCR... tb_equipamento" />
+            <marker date="1533054281183" expanded="true" signature="63401:63477" ph="SELECT ESTAD... tb_equipamento" />
           </folding>
         </state>
       </provider>

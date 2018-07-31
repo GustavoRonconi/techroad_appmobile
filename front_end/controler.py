@@ -3,7 +3,7 @@
 # CIVILTEC TECNOLOGIA EM CONSTRUÇÃO#####
 #########################################
 # coding: utf-8
-# update: 27-06-2018 0741
+# update: 1
 
 from kivy.app import App
 # from kivy.uix.floatlayout import FloatLayout
@@ -21,7 +21,7 @@ Window.clearcolor = (1, 1, 1, 1)  # FUNDO BRANCO
 
 
 # CONECTA COM O BANCO DE DADOS
-conn = sqlite3.connect('C:\\DEV\\techroad_appmobile\database\\techroadlocal.db', isolation_level=None)
+conn = sqlite3.connect('techroadlocal.db', isolation_level=None)
 
 
 Builder.load_string("""
@@ -157,6 +157,15 @@ Builder.load_string("""
         size_hint: (.3, .1)
         text: "Equipamento"
         on_press: root.on_press_selequipamento()
+        font_name: "consola"
+        font_size: "35sp"
+    
+    ButtonTechRoad:
+        id: botao_comunicacao
+        pos_hint: {"center_x":.230, "y":.05}
+        size_hint: (.3, .1)
+        text: "Comunicação"
+        on_press: root.on_press_comunicacao()
         font_name: "consola"
         font_size: "35sp"
     
@@ -842,16 +851,14 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .70}
         font_size: "40sp"
         
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: local_origem_op1
         pos_hint: {"x": .48, "y": .695}
         size_hint: (.45, .09)
-        font_size: "40sp"
-        readonly: True
-        on_focus: root.ao_focar1();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
-        
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar1();
+                
         
     TextTechRoad:
         id: local_destino1_text
@@ -861,15 +868,13 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .60}
         font_size: "40sp"
      
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: local_destino_op1
         pos_hint: {"x": .48, "y": .595}
         size_hint: (.45, .09)
-        font_size: "40sp"
-        readonly: True
-        on_focus: root.ao_focar2();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar2();        
     
     TextTechRoad:
         id: hora1_text
@@ -927,7 +932,7 @@ Builder.load_string("""
         pos_hint: {"x":.51, "y":.055}
         size_hint: (.39, .18)
         text: "Iniciar"
-        on_press: root.on_press_avancar()
+        on_press: root.on_press_iniciar()
         font_name: "consola"
         font_size: "35sp"
     
@@ -969,16 +974,13 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .76}
         font_size: "35sp"
         
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: local_origem_op2
         pos_hint: {"x": .48, "y": .755}
         size_hint: (.45, .08)
+        font_name: "consola"
         font_size: "35sp"
-        readonly: True
-        on_focus: root.ao_focar1();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
-        
+        on_press: root.ao_focar1();              
         
     TextTechRoad:
         id: local_destino2_text
@@ -988,15 +990,13 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .67}
         font_size: "35sp"
      
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: local_destino_op2
         pos_hint: {"x": .48, "y": .665}
         size_hint: (.45, .08)
+        font_name: "consola"
         font_size: "35sp"
-        readonly: True
-        on_focus: root.ao_focar2();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        on_press: root.ao_focar2();        
 
     TextTechRoad:
         id: material2_text
@@ -1006,16 +1006,14 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .58}
         font_size: "35sp"   
 
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: material_op2
         pos_hint: {"x": .48, "y": .575}
         size_hint: (.45, .08)
+        font_name: "consola"
         font_size: "35sp"
-        readonly: True
-        on_focus: root.ao_focar3();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
-    
+        on_press: root.ao_focar3();
+            
         
     TextTechRoad:
         id: quantidade2_text
@@ -1025,15 +1023,13 @@ Builder.load_string("""
         pos_hint: {"x": .06, "y": .49}
         font_size: "35sp"   
 
-    InputTechRoad:
-        markup: True
+    ButtonTechRoad:
         id: quantidade_op2
         pos_hint: {"x": .48, "y": .485}
         size_hint: (.45, .08)
+        font_name: "consola"
         font_size: "35sp"
-        readonly: True
-        on_focus: root.ao_focar4();
-        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2    
+        on_press: root.ao_focar4();           
     
     
     TextTechRoad:
@@ -1092,7 +1088,7 @@ Builder.load_string("""
         pos_hint: {"x":.51, "y":.045}
         size_hint: (.39, .15)
         text: "Iniciar"
-        on_press: root.on_press_avancar()
+        on_press: root.on_press_iniciar()
         font_name: "consola"
         font_size: "35sp"
     
@@ -1102,8 +1098,134 @@ Builder.load_string("""
         text: "Cancelar"
         on_press: root.on_press_cancelar()
         font_name: "consola"
-        font_size: "35sp"  
-    
+        font_size: "35sp"
+        
+#TELA COMUNICACAO  
+<TelaComunicacao@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Status de Comunicação[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .825}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Comunicação obrigatória (OBD-II, GPS)[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .765}
+        font_size: "18sp" 
+        
+    TextTechRoad:
+        id: comunicacaoobd_text
+        markup: True
+        text: "[color=1874CD]-Comunicação OBD-II:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .60}
+        font_size: "35sp" 
+        
+    TextTechRoad:
+        id: gps_text
+        markup: True
+        text: "[color=1874CD]-GPS (Localização):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .50}
+        font_size: "35sp"
+        
+    TextTechRoad:
+        id: internet_text
+        markup: True
+        text: "[color=1874CD]-Conexão à Internet:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .40}
+        font_size: "35sp"
+        
+    TextTechRoad:
+        id: sincroniza_text
+        markup: True
+        text: "[color=1874CD]-Última Sincronização:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .30}
+        font_size: "35sp" 
+         
+    ButtonTechRoad:
+        pos_hint: {"x":.25, "y":.0555}
+        size_hint: (.50, .15)
+        text: "Voltar"
+        on_press: root.on_press_voltar()
+        font_name: "consola"
+        font_size: "35sp"        
+         
+#ACOMPANHAMENTO DE ROTA
+<ResumoRota@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Acompanhamento de Rota[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .880}
+        font_size: "55sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Concentre-se em dirigir neste momento![/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .790}
+        font_size: "18sp"
+ 
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]-Velocímetro(km/h):[/b][/color]"
+        pos_hint: {'center_x': .38, 'center_y': .68}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]-Distância(km):[/b][/color]"
+        pos_hint: {'center_x': .312, 'center_y': .59}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]-Tempo em Rota:[/b][/color]"
+        pos_hint: {'center_x': .3135, 'center_y': .50}
+        font_size: "50sp"
+        
+    TextTechRoad:
+        markup: True
+        id: cronid
+        text: "PARADO"
+        pos_hint: {"center_x": .70, "center_y": .50}
+        font_name: "consola"
+        font_size: "50sp"        
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.045}
+        size_hint: (.39, .15)
+        text: "Finalizar"
+        on_press: root.on_press_finalizar()
+        font_name: "consola"
+        font_size: "35sp"
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.045}
+        size_hint: (.39, .15)
+        text: "Cancelar"
+        on_press: root.on_press_cancelar()
+        font_name: "consola"
+        font_size: "35sp"
+   
 """)
 
 
@@ -1149,7 +1271,6 @@ class TelaLocalOrigem2(Screen):
         else:
             if self.manager.get_screen('telalocalorigem2').ids.desc_origem2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
                 self.manager.get_screen('telaprerota2').ids.local_origem_op2.text = self.manager.get_screen('telalocalorigem2').ids.local_origem2.text
-                self.manager.get_screen('telaprerota2').ids.local_origem_op2.focus = False
                 App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
@@ -1158,7 +1279,6 @@ class TelaLocalOrigem2(Screen):
             App.get_running_app().root.current = 'telainicial'
 
         else:
-            self.manager.get_screen('telaprerota2').ids.local_origem_op2.focus = False
             self.manager.get_screen('telalocalorigem2').ids.local_origem2.text = self.manager.get_screen('telaprerota2').ids.local_origem_op2.text
             App.get_running_app().root.current = 'telaprerota2'
 
@@ -1194,7 +1314,6 @@ class TelaLocalOrigem1(Screen):
         else:
             if self.manager.get_screen('telalocalorigem1').ids.desc_origem1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
                 self.manager.get_screen('telaprerota1').ids.local_origem_op1.text = self.manager.get_screen('telalocalorigem1').ids.local_origem1.text
-                self.manager.get_screen('telaprerota1').ids.local_origem_op1.focus = False
                 App.get_running_app().root.current = 'telaprerota1'
 
 
@@ -1204,7 +1323,6 @@ class TelaLocalOrigem1(Screen):
             App.get_running_app().root.current = 'teladeslocamento1'
 
         else:
-            self.manager.get_screen('telaprerota1').ids.local_origem_op1.focus = False
             self.manager.get_screen('telalocalorigem1').ids.local_origem1.text = self.manager.get_screen('telaprerota1').ids.local_origem_op1.text
             App.get_running_app().root.current = 'telaprerota1'
 
@@ -1242,7 +1360,6 @@ class TelaMaterial2(Screen):
         else:
             if self.manager.get_screen('telamaterial2').ids.desc_material.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Material Inexistente...[/color]','[color=FF0000]Material Desativado...[/color]']:
                 self.manager.get_screen('telaprerota2').ids.material_op2.text = self.manager.get_screen('telamaterial2').ids.cod_material.text
-                self.manager.get_screen('telaprerota2').ids.material_op2.focus = False
                 App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
@@ -1250,7 +1367,6 @@ class TelaMaterial2(Screen):
             self.manager.get_screen('telamaterial2').ids.cod_material.text = ""
             App.get_running_app().root.current = 'telalocalorigem2'
         else:
-            self.manager.get_screen('telaprerota2').ids.material_op2.focus = False
             self.manager.get_screen('telamaterial2').ids.cod_material.text = self.manager.get_screen('telaprerota2').ids.material_op2.text
             App.get_running_app().root.current = 'telaprerota2'
 
@@ -1314,7 +1430,6 @@ class TelaQuantidade2(Screen):
         else:
             if self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text not in ['[color=FF0000]Qtd. Excede a Cap. Máxima[/color]', '[color=FF0000]Especificar Unid/Qtd.[/color]']:
                 self.manager.get_screen('telaprerota2').ids.quantidade_op2.text = self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text[(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('0]')+2):(self.manager.get_screen('telaquantidade2').ids.validador_quantidade.text.find('[/'))]
-                self.manager.get_screen('telaprerota2').ids.quantidade_op2.focus = False
                 App.get_running_app().root.current = 'telaprerota2'
 
 
@@ -1326,7 +1441,6 @@ class TelaQuantidade2(Screen):
             self.manager.get_screen('telaquantidade2').ids.un.state = 'normal'
             App.get_running_app().root.current = 'telamaterial2'
         else:
-            self.manager.get_screen('telaprerota2').ids.quantidade_op2.focus = False
             self.manager.get_screen('telaquantidade2').ids.qtd_transportada.text = self.manager.get_screen('telaprerota2').ids.quantidade_op2.text[:self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' M' or ' K' or ' U')]
             if self.manager.get_screen('telaprerota2').ids.quantidade_op2.text.find(' M') != -1:
                 self.manager.get_screen('telaquantidade2').ids.m3.state = 'down'
@@ -1432,7 +1546,7 @@ class TelaLocalDestino1(Screen):
     def on_press_avancar(self):
         if self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text == "Avançar":
             if self.manager.get_screen('telalocaldestino1').ids.desc_destino1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
-                if self.manager.get_screen('telalocalorigem1').ids.local_origem1.text != "":
+                if self.manager.get_screen('telalocalorigem1').ids.local_origem1.text != "": #CHECA A OPCAO DE TERRAPLENAGEM SELECIONADA
                     self.manager.get_screen('telaprerota1').ids.local_origem_op1.text = self.manager.get_screen('telalocalorigem1').ids.local_origem1.text
                     self.manager.get_screen('telaprerota1').ids.local_destino_op1.text = self.manager.get_screen('telalocaldestino1').ids.local_destino1.text
                     self.manager.get_screen('telaprerota1').ids.hora_op1.text = time.strftime('%H:%M')
@@ -1458,7 +1572,6 @@ class TelaLocalDestino1(Screen):
         elif self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text == "Alterar":
             if self.manager.get_screen('telalocaldestino1').ids.desc_destino1.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
                 self.manager.get_screen('telaprerota1').ids.local_destino_op1.text = self.manager.get_screen('telalocaldestino1').ids.local_destino1.text
-                self.manager.get_screen('telaprerota1').ids.local_destino_op1.focus = False
                 App.get_running_app().root.current = 'telaprerota1'
 
 
@@ -1471,7 +1584,6 @@ class TelaLocalDestino1(Screen):
                 App.get_running_app().root.current = 'telalocalorigem1'
 
         else:
-            self.manager.get_screen('telaprerota1').ids.local_destino_op1.focus = False
             self.manager.get_screen('telalocaldestino1').ids.local_destino1.text = self.manager.get_screen('telaprerota1').ids.local_destino_op1.text
             App.get_running_app().root.current = 'telaprerota1'
 
@@ -1516,7 +1628,6 @@ class TelaLocalDestino2(Screen):
         elif self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text == "Alterar":
             if self.manager.get_screen('telalocaldestino2').ids.desc_destino2.text not in ['[color=FF0000]Digite o código...[/color]', '[color=FF0000]Local Inexistente...[/color]', '[color=FF0000]Local Desativado...[/color]']:
                 self.manager.get_screen('telaprerota2').ids.local_destino_op2.text = self.manager.get_screen('telalocaldestino2').ids.local_destino2.text
-                self.manager.get_screen('telaprerota2').ids.local_destino_op2.focus = False
                 App.get_running_app().root.current = 'telaprerota2'
 
     def on_press_voltar(self):
@@ -1524,7 +1635,6 @@ class TelaLocalDestino2(Screen):
             self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = ""
             App.get_running_app().root.current = 'telaquantidade2'
         else:
-            self.manager.get_screen('telaprerota2').ids.local_destino_op2.focus = False
             self.manager.get_screen('telalocaldestino2').ids.local_destino2.text = self.manager.get_screen('telaprerota2').ids.local_destino_op2.text
             App.get_running_app().root.current = 'telaprerota2'
 
@@ -1603,27 +1713,13 @@ class TelaSelecionarEquipamento(Screen):
         elif descricao_equipamento != None and estado_equipamento != (1,):
             self.manager.get_screen('telaselecionarequipamento').ids.desc_equipamento.text = "[color=FF0000]Equipamento Desativado...[/color]"
 
-class DataAtual(Label):
-    def update(self, *args):
-        self.markup = True
-        self.text = "[b][color=1874CD]" + time.strftime('%d/%m/%y') + "," + "[/color][/b]"
-        self.pos_hint = {"center_x":.42, "center_y":.45}
-        self.font_name = "consola"
-        self.font_size = "25sp"
-
-
-class RelogioDigital(Label):
-    def update(self, *args):
-        self.markup = True
-        self.text = "[b][color=1874CD]" + time.strftime('%H:%M:%S') + "[/color][/b]"
-        self.pos_hint = {"center_x": .58, "center_y": .45}
-        self.font_name = "consola"
-        self.font_size = "25sp"
 
 class ResumoInfo1(Screen):
 
     def on_press_iniciar(self):
-        pass
+        self.manager.get_screen('telaresumorota').ids.cronid.text = "[b][color=1874CD]" + "00:00:00" + "[/color][/b]"
+        App.get_running_app().root.current = 'telaresumorota'
+
 
     def on_press_cancelar(self):
         global ultimatela_cancela
@@ -1645,7 +1741,9 @@ class ResumoInfo1(Screen):
 class ResumoInfo2(Screen):
 
     def on_press_iniciar(self):
-        pass
+        self.manager.get_screen('telaresumorota').ids.cronid.text = "[b][color=1874CD]" + "00:00:00" + "[/color][/b]"
+        App.get_running_app().root.current = 'telaresumorota'
+
 
     def on_press_cancelar(self):
         global ultimatela_cancela
@@ -1677,10 +1775,53 @@ class ResumoInfo2(Screen):
         App.get_running_app().root.current = 'telaquantidade2'
 
 
+class TelaComunicacao(Screen):
+    def on_press_voltar(self):
+        App.get_running_app().root.current = 'telainicial'
+
+
+class ResumoRota(Screen):
+    def __init__(self, **kwargs):
+        super(ResumoRota, self).__init__(**kwargs)
+        Clock.schedule_interval(self.update, 1)
+
+    def update(self, *args):
+        if self.manager.get_screen('telaresumorota').ids.cronid.text != 'PARADO':
+            segundos = int(self.manager.get_screen('telaresumorota').ids.cronid.text[23:25])
+            minutos = int(self.manager.get_screen('telaresumorota').ids.cronid.text[20:22])
+            horas = int(self.manager.get_screen('telaresumorota').ids.cronid.text[17:19])
+            if segundos == 60:
+                minutos += 1
+                segundos = 0
+            if minutos == 60:
+                horas += 1
+                minutos = 0
+            segundos += 1
+            self.manager.get_screen('telaresumorota').ids.cronid.text = "[b][color=1874CD]" + "{:02}".format(horas)+":"+"{:02}".format(minutos)+":"+"{:02}".format(segundos) + "[/color][/b]"
+
+    def on_press_finalizar(self):
+        pass
+
+    def on_press_cancelar(self):
+        global ultimatela_cancela
+        ultimatela_cancela = 'telaresumorota'
+        App.get_running_app().root.current = 'telacancelar'
+
+
+class ResumoRotaFinal(Screen):
+    def on_press_salvar(self):
+        pass
+
+    def on_press_cancelar(self):
+        global ultimatela_cancela
+        ultimatela_cancela = 'telaresumorotafinal'
+        App.get_running_app().root.current = 'telacancelar'
+
 class TelaCancelar(Screen):
     global ultimatela_cancela
 
     def on_press_sim(self):
+        self.manager.get_screen('telaresumorota').ids.cronid.text = "PARADO"
         self.manager.get_screen('telaprerota1').ids.local_origem1_text.disabled = False
         self.manager.get_screen('telaprerota1').ids.local_origem1_text.opacity = 1
         self.manager.get_screen('telaprerota1').ids.local_origem_op1.disabled = False
@@ -1754,6 +1895,24 @@ class TelaSair(Screen):
         App.get_running_app().root.current = ultimatela
 
 
+class DataAtual(Label):
+    def update(self, *args):
+        self.markup = True
+        self.text = "[b][color=1874CD]" + time.strftime('%d/%m/%y') + "," + "[/color][/b]"
+        self.pos_hint = {"center_x":.42, "center_y":.45}
+        self.font_name = "consola"
+        self.font_size = "25sp"
+
+
+class RelogioDigital(Label):
+    def update(self, *args):
+        self.markup = True
+        self.text = "[b][color=1874CD]" + time.strftime('%H:%M:%S') + "[/color][/b]"
+        self.pos_hint = {"center_x": .58, "center_y": .45}
+        self.font_name = "consola"
+        self.font_size = "25sp"
+
+
 class TechRoadMain(Screen):
     def __init__(self, **kwargs):
         super(TechRoadMain, self).__init__(**kwargs)
@@ -1780,6 +1939,9 @@ class TechRoadMain(Screen):
     def on_press_selequipamento(self):
         App.get_running_app().root.current = 'telaselecionarequipamento'
 
+    def on_press_comunicacao(self):
+        App.get_running_app().root.current = 'telacomunicacao'
+
     crudeclock = RelogioDigital()
     Clock.schedule_interval(crudeclock.update, 1)
 
@@ -1799,7 +1961,9 @@ gt.add_widget(TelaQuantidade2(name='telaquantidade2'))
 gt.add_widget(TelaLocalDestino2(name='telalocaldestino2'))
 gt.add_widget(TelaSelecionarEquipamento(name='telaselecionarequipamento'))
 gt.add_widget(TelaDeslocamento1(name='teladeslocamento1'))
-
+gt.add_widget(TelaComunicacao(name='telacomunicacao'))
+gt.add_widget(ResumoRota(name='telaresumorota'))
+gt.add_widget(ResumoRotaFinal(name='telaresumorotafinal'))
 
 
 class TechRoadApp(App):
