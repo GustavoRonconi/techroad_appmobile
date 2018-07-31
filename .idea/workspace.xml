@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d51461d-25a1-45a6-8c41-2e0b4f3eb432" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/front_end/controler.py" afterPath="$PROJECT_DIR$/front_end/controler.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -720,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530096120318</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Update: 25/04/2018 - 15:49&#10;Gustavo A. Ronconi">
+      <created>1533054285716</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1533054285716</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
