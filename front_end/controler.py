@@ -1363,6 +1363,164 @@ Builder.load_string("""
         on_press: root.on_press_cancelar()
         font_name: "consola"
         font_size: "35sp"
+
+#FINALIZANDO E SALVANDO ROTA - TRANSPORTE
+
+<ResumoRotaFinal2@FloatLayout>:
+    orientation: "horizontal"
+    canvas.before:
+        Color:
+            rgba: C("#1874CD")
+        Line:
+            width: 1.5
+            rectangle: (0.05*self.width, 0.03*self.height, 0.9*self.width, 0.94*self.height)
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Resumo Final de Rota[/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .90}
+        font_size: "50sp"
+            
+    TextTechRoad:
+        markup: True
+        text: "[color=1874CD][b]Conferir e corrigir, se necessário![/b][/color]"
+        pos_hint: {'center_x': .5, 'center_y': .83}
+        font_size: "18sp"  
+
+
+    TextTechRoad:
+        id: local_origem2_final_text
+        markup: True
+        text: "[color=1874CD]-Local Origem:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .76}
+        font_size: "35sp"
+        
+    ButtonTechRoad:
+        id: local_origem_final
+        pos_hint: {"x": .48, "y": .755}
+        size_hint: (.45, .08)
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar1();              
+        
+    TextTechRoad:
+        id: local_destino2_final_text
+        markup: True
+        text: "[color=1874CD]-Local Destino:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .67}
+        font_size: "35sp"
+     
+    ButtonTechRoad:
+        id: local_destino_final
+        pos_hint: {"x": .48, "y": .665}
+        size_hint: (.45, .08)
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar2();        
+
+    TextTechRoad:
+        id: material2_final_text
+        markup: True
+        text: "[color=1874CD]-Cód. Material:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .58}
+        font_size: "35sp"   
+
+    ButtonTechRoad:
+        id: material_final
+        pos_hint: {"x": .48, "y": .575}
+        size_hint: (.45, .08)
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar3();
+            
+        
+    TextTechRoad:
+        id: quantidade2_final_text
+        markup: True
+        text: "[color=1874CD]-Quantidade:[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .49}
+        font_size: "35sp"   
+
+    ButtonTechRoad:
+        id: quantidade_final
+        pos_hint: {"x": .48, "y": .485}
+        size_hint: (.45, .08)
+        font_name: "consola"
+        font_size: "35sp"
+        on_press: root.ao_focar4();           
+    
+    
+    TextTechRoad:
+        id: tempo_final
+        markup: True
+        text: "[color=1874CD]-Tempo(h:min):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .40}
+        font_size: "35sp" 
+        
+    InputTechRoad:
+        markup: True
+        id: tempo_final        
+        pos_hint: {"x": .48, "y": .395}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True
+
+    TextTechRoad:
+        id: distancia_final_text
+        markup: True
+        text: "[color=1874CD]-Distância(km):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .31}
+        font_size: "35sp"
+    
+    InputTechRoad:
+        markup: True
+        id: distancia_final        
+        pos_hint: {"x": .48, "y": .305}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True  
+        
+       
+    TextTechRoad:
+        id: consumo_final_text
+        markup: True
+        text: "[color=1874CD]-Consumo(km/l):[/color]"
+        text_size: self.size
+        pos_hint: {"x": .06, "y": .22}
+        font_size: "35sp"
+    
+    InputTechRoad:
+        markup: True
+        id: consumo_final        
+        pos_hint: {"x": .48, "y": .215}
+        size_hint: (.45, .08)
+        font_size: "35sp" 
+        padding_x: (self.width - self._get_text_width(self.text, self.tab_width, self._label_cached))/2
+        disabled: True 
+        
+    ButtonTechRoad:
+        pos_hint: {"x":.51, "y":.045}
+        size_hint: (.39, .15)
+        text: "Iniciar"
+        on_press: root.on_press_iniciar()
+        font_name: "consola"
+        font_size: "35sp"
+    
+    ButtonTechRoad:
+        pos_hint: {"x":.1, "y":.045}
+        size_hint: (.39, .15)
+        text: "Cancelar"
+        on_press: root.on_press_cancelar()
+        font_name: "consola"
+        font_size: "35sp"
  
 """)
 
@@ -2023,16 +2181,28 @@ class ResumoRotaFinal2(Screen):
         App.get_running_app().root.current = 'telacancelar'
 
     def ao_focar1(self):
-        self.manager.get_screen('telalocalorigem1').ids.botao_origem1.text = "Alterar"
-        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.disabled = True
-        self.manager.get_screen('telalocalorigem1').ids.sair_origem1.opacity = 0
-        App.get_running_app().root.current = 'telalocalorigem1'
+        self.manager.get_screen('telalocalorigem2').ids.botao_origem2.text = "Alterar"
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.disabled = True
+        self.manager.get_screen('telalocalorigem2').ids.sair_origem2.opacity = 0
+        App.get_running_app().root.current = 'telalocalorigem2'
 
     def ao_focar2(self):
-        self.manager.get_screen('telalocaldestino1').ids.botao_destino1.text = "Alterar"
-        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.disabled = True
-        self.manager.get_screen('telalocaldestino1').ids.sair_destino1.opacity = 0
-        App.get_running_app().root.current = 'telalocaldestino1'
+        self.manager.get_screen('telalocaldestino2').ids.botao_destino2.text = "Alterar"
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.disabled = True
+        self.manager.get_screen('telalocaldestino2').ids.sair_destino2.opacity = 0
+        App.get_running_app().root.current = 'telalocaldestino2'
+
+    def ao_focar3(self):
+        self.manager.get_screen('telamaterial2').ids.botao_material2.text = "Alterar"
+        self.manager.get_screen('telamaterial2').ids.sair_material2.disabled = True
+        self.manager.get_screen('telamaterial2').ids.sair_material2.opacity = 0
+        App.get_running_app().root.current = 'telamaterial2'
+
+    def ao_focar4(self):
+        self.manager.get_screen('telaquantidade2').ids.botao_quantidade2.text = "Alterar"
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.disabled = True
+        self.manager.get_screen('telaquantidade2').ids.sair_quantidade2.opacity = 0
+        App.get_running_app().root.current = 'telaquantidade2'
 
 
 
